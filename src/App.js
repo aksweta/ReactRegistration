@@ -21,6 +21,7 @@ function App() {
         const inputdata = {username, password}
         axios.post('http://localhost:8080/login', inputdata).then((message)=>{
           setMessage(message.data.message)})
+
       };
 
   const regiclick = () => {
@@ -28,14 +29,21 @@ function App() {
         const data ={regiusername, regipassword, regiemail,regiaddress,regimobile}
        axios.post('http://localhost:8080/registartion', data ).then((result) => {
          setMsg(result.data.message)
+         setRegiusername("");
+         setPassword("");
+         setRegiaddress("");
+         setRegimobile("");
+         setEmail("");
        })
       
   };
 
   return (
-    <div>
+    <div className="background">
       <div className="container">
-        <h1>Log in</h1>
+        <h1 className="login">Welcome Back!</h1>
+        <h4 className="login">To keep connected with us <br/> Please login with your personal info</h4>
+        
         <div className="con1">
           <InputField
             type="text"
@@ -49,7 +57,7 @@ function App() {
             onChange={(e) => setPassword(e.target.value)}
             label=" PassWord : "
           />
-          <Button onClick={loginclick}>Log In</Button>
+          <Button colour="white" onClick={loginclick}>Log In</Button>
 
           <div>
           <p>{message}</p>
@@ -57,7 +65,8 @@ function App() {
         </div>
       </div>
       <div className="container2">
-        <h1>Not yet registred?</h1>
+        <h1 className="regi">Create Account</h1>
+        <h2 className="regi">Don't have an account? Register one!</h2>
         <div className="con1">
           <InputField
             type="text"
@@ -89,7 +98,7 @@ function App() {
             onChange={(e) => setRegimobile(e.target.value)}
             label=" Mobile Number : "
           />
-          <Button onClick={regiclick}>Create new account</Button>
+          <Button  colour="rgba(11, 128, 112, 0.897)" textcolor="white" onClick={regiclick}>Create new account</Button>
         </div>
         <div>
           <p>{msg}</p>

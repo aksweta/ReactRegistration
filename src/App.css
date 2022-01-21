@@ -1,19 +1,22 @@
 .container {
   float: left;
-  background-color: darksalmon;
+  background-color:rgba(11, 128, 112, 0.897);
   height: 1000px;
-  width: 50%;
+  width: 40%;
+  padding-top: 10%;
 }
 
 .container2 {
   display: inline-block;
-  background-color: grey;
+  background-color:white;
   height: 1000px;
-  width: 50%;
+  width: 60%;
+  padding-top: 10%;
 }
 
-h1 {
+.regi{
   text-align: center;
+  color:rgba(11, 128, 112, 0.897);
 }
 
 .con1 {
@@ -25,11 +28,12 @@ input[type="password"],
 input[type="email"],
 input[type="number"] {
   margin-bottom: 20px;
-  margin-left: 10px;
-  
+  margin-left: 5px;
+  font-size: larger;
 }
 label {
   width: 400px;
+  font-size: larger;
 }
 
 p{
@@ -37,6 +41,22 @@ p{
 }
 button{
   font-size: large;
-   margin-left: 20%;
+   margin-left:10%;
    margin-top: 10%;
+   border-radius: 12px;
+   width: 250px;
+   height:60px;
+
+}
+
+
+.login{
+  text-align: center;
+  color:white;
+}
+
+.form-control{
+  width: 50%;
+  border-radius: 2px;
+  
 }
